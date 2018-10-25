@@ -1,0 +1,11 @@
+stmt = (halt)
+
+     | (lit psymbol-or-value)
+
+     | (const psymbol psymbol-or-value)
+
+     | (data psymbol psymbol-or-value ...)
+
+     | (data psymbol (nat psymbol-or-value))
+
+     | (label psymbol) 

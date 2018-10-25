@@ -1,0 +1,14 @@
+(define test-prog
+  '((gt (11) (9) 0)      ; 0: tmp1 <- x > 0
+    (branch (11) 3)      ; 1: if tmp1 goto 3
+    (jump 8)             ; 2: goto 8
+    (mul (10) 2 (10))    ; 3: y <- 2 * y
+    (sub (9) (9) 1)      ; 4: x <- x - 1
+    (print-val (10))     ; 5: print y
+    (print-string "\n")  ; 6: print "\n"
+    (jump 0)             ; 7: goto 0
+     0                   ; 8: 0 [number, halts program]
+     10                  ; 9: x 
+     1                   ; 10: y
+     0                   ; 11: tmp1
+     ))

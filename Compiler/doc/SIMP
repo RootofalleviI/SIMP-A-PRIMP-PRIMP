@@ -1,0 +1,51 @@
+program = (vars [(id number) ...] stmt ...)
+
+   stmt = (print aexp) 
+
+        | (print string) 
+
+        | (set id aexp) 
+
+        | (seq stmt ...) 
+
+        | (iif bexp stmt stmt) 
+
+        | (while bexp stmt ...) 
+
+        | (skip)
+
+        
+   aexp = (+ aexp aexp)
+
+        | (* aexp aexp)
+
+        | (- aexp aexp)
+
+        | (div aexp aexp)
+
+        | (mod aexp aexp)
+
+        | number
+
+        | id 
+
+        
+   bexp = (= aexp aexp)
+
+        | (> aexp aexp)
+
+        | (< aexp aexp)
+
+        | (>= aexp aexp)
+
+        | (<= aexp aexp)
+
+        | (not bexp)
+
+        | (and bexp ...)
+
+        | (or bexp ...)
+
+        | true
+
+        | false

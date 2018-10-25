@@ -1,0 +1,4 @@
+(result-val (interp (parse
+                     '(with ((x (box 3)))
+                            (with ((y x))
+                                  (seq (setbox y 5) (* (unbox x) (unbox y)))))) '() '()))

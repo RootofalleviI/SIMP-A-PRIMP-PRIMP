@@ -1,0 +1,63 @@
+program = stmt-or-value ...
+
+   stmt = (add dest opd opd)
+
+        | (sub dest opd opd)
+
+        | (mul dest opd opd)
+
+        | (div dest opd opd)
+
+        | (mod dest opd opd)
+
+        | (gt dest opd opd)
+
+        | (ge dest opd opd)
+
+        | (lt dest opd opd)
+
+        | (le dest opd opd)
+
+        | (equal dest opd opd)
+
+        | (not-equal dest opd opd)
+
+        | (land dest opd opd)
+
+        | (lor dest opd opd)
+
+        | (lnot dest opd)
+
+        | (jump opd)
+
+        | (branch opd opd)
+
+        | (move dest opd)
+
+        | (print-val opd)
+
+        | (print-string string)
+
+        
+
+    opd = imm
+
+        | ind
+
+        | (imm ind)
+
+        
+
+   dest = ind
+
+        | (imm ind)
+
+        
+
+    imm = integer
+
+        | boolean
+
+        
+
+    ind = (nat)    
